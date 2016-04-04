@@ -170,10 +170,11 @@ print(paste(&quot;5-minute Interval with maximum activity: &quot;, max_activity_
 <div id="imputing-missing-values" class="section level2">
 <h2>Imputing missing values</h2>
 <p>For filling the 2304 missing values (of 17,568 rows) I used the mean value calculated in the preceding code chunk: Steps per interval</p>
-<p>The mean is</p>
+<p>The mean keeps being 10,770 and the median goes up by little to 10,770</p>
 <p>Do these values differ from the estimates from the first part of the assignment?</p>
 <p>The mean keeps the same, because I used the mean to fill the NA values; and the median differ slightly by less than 1%.</p>
 <p>What is the impact of imputing missing data on the estimates of the total daily number of steps?</p>
+<p>There average number of steps taken per day increased.</p>
 <pre class="r"><code>## Filling missing values
 rows_with_na &lt;- sum(is.na(activity$steps))
 print(paste(&quot;Rows with missing values: &quot;, rows_with_na))</code></pre>
@@ -208,6 +209,7 @@ print(paste(&quot;Steps per day (without NA) - Mean: &quot;, mean_w_na, &quot; |
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
+<p>Yes. There is more activity during weekday’s mornings, but the overall weekend’s activity is higher and it lasts till higher hours.</p>
 <pre class="r"><code>## Finding if is weekday / weekend
 Sys.setlocale(&quot;LC_TIME&quot;, &quot;en_US.UTF-8&quot;)</code></pre>
 <pre><code>## [1] &quot;en_US.UTF-8&quot;</code></pre>

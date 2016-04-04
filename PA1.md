@@ -119,7 +119,7 @@ print(paste("5-minute Interval with maximum activity: ", max_activity_5min_inter
 
 For filling the 2304 missing values (of 17,568 rows) I used the mean value calculated in the preceding code chunk: Steps per interval 
 
-The mean is 
+The mean keeps being 10,770 and the median goes up by little to 10,770 
 
 Do these values differ from the estimates from the first part of the assignment? 
 
@@ -127,6 +127,8 @@ The mean keeps the same, because I used the mean to fill the NA values; and the 
 
 
 What is the impact of imputing missing data on the estimates of the total daily number of steps?
+
+There average number of steps taken per day increased. 
 
 
 ```r
@@ -191,6 +193,7 @@ print(paste("Steps per day (without NA) - Mean: ", mean_w_na, " | Median: ", med
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
+Yes. There is more activity during weekday's mornings, but the overall weekend's activity is higher and it lasts till higher hours.   
 
 
 ```r
